@@ -1,0 +1,14 @@
+{
+  "schema": "src/schema/**/*.gql",
+
+  "generates": {
+    "src/types.ts": {
+      "plugins": [
+        "typescript-common",
+        "typescript-client",
+        "typescript-server",
+        "typescript-resolvers"
+      ]
+    }
+  }
+}
