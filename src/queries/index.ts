@@ -1,5 +1,5 @@
-import { books } from "./books";
+import { viewer } from "./viewer";
 
 export const Query = {
-  books
+  viewer
 };

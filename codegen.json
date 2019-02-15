@@ -1,5 +1,6 @@
 {
-  "schema": "src/schema/**/*.gql",
+  "schema": "public/schema/**/*.gql",
+  "overwrite": true,
 
   "generates": {
     "src/types.ts": {
