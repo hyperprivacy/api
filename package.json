@@ -1,36 +1,38 @@
 {
-  "name": "api",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "start": "node ./public/main.js",
-    "serve": "tsc -p ./tsconfig.json -w",
-    "types": "gql-gen --config ./codegen.json"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/hyperprivacy/api.git"
-  },
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/hyperprivacy/api/issues"
-  },
-  "homepage": "https://github.com/hyperprivacy/api#readme",
-  "dependencies": {
-    "apollo-server": "^2.4.2",
-    "glob": "^7.1.3",
-    "graphql": "^14.1.1",
-    "graphql-code-generator": "^0.16.1",
-    "typescript": "^3.3.3"
-  },
-  "devDependencies": {
-    "@types/glob": "^7.1.1",
-    "@types/graphql": "^14.0.7",
-    "@types/node": "^11.9.4",
-    "graphql-codegen-typescript-client": "^0.16.1",
-    "graphql-codegen-typescript-common": "^0.16.1",
-    "graphql-codegen-typescript-resolvers": "^0.16.1",
-    "graphql-codegen-typescript-server": "^0.16.1"
-  }
+	"name": "api",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"start": "node ./public/main.js",
+		"build": "tsc -p ./tsconfig.json",
+		"types": "gql-gen --config ./codegen.json"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/hyperprivacy/api.git"
+	},
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/hyperprivacy/api/issues"
+	},
+	"homepage": "https://github.com/hyperprivacy/api#readme",
+	"dependencies": {
+		"apollo-server": "^2.4.2",
+		"cors": "^2.8.5",
+		"glob": "^7.1.3",
+		"graphql": "^14.1.1",
+		"graphql-code-generator": "^0.16.1",
+		"typescript": "^3.3.3"
+	},
+	"devDependencies": {
+		"@types/glob": "^7.1.1",
+		"@types/graphql": "^14.0.7",
+		"@types/node": "^11.9.4",
+		"@types/cors": "^2.8.4",
+		"graphql-codegen-typescript-client": "^0.16.1",
+		"graphql-codegen-typescript-common": "^0.16.1",
+		"graphql-codegen-typescript-resolvers": "^0.16.1",
+		"graphql-codegen-typescript-server": "^0.16.1"
+	}
 }
