@@ -122,10 +122,10 @@ export interface RegisterSensorMutationArgs {
   input: RegisterSensorInput;
 }
 export interface RevokeSensorMutationArgs {
-  input?: Maybe<RegisterSensorInput>;
+  input: RegisterSensorInput;
 }
 export interface PublishEventMutationArgs {
-  input?: Maybe<PublishEventInput>;
+  input: PublishEventInput;
 }
 
 import {
@@ -412,7 +412,7 @@ export namespace MutationResolvers {
     Context = {}
   > = Resolver<R, Parent, Context, RevokeSensorArgs>;
   export interface RevokeSensorArgs {
-    input?: Maybe<RegisterSensorInput>;
+    input: RegisterSensorInput;
   }
 
   export type PublishEventResolver<
@@ -421,7 +421,7 @@ export namespace MutationResolvers {
     Context = {}
   > = Resolver<R, Parent, Context, PublishEventArgs>;
   export interface PublishEventArgs {
-    input?: Maybe<PublishEventInput>;
+    input: PublishEventInput;
   }
 }
 

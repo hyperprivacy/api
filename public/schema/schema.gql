@@ -1,73 +1,74 @@
 scalar DateTime
+
 scalar Binary
 
 type Mutation {
-  login(input: LoginInput): String
-  registerSensor(input: RegisterSensorInput!): Device
-  revokeSensor(input: RegisterSensorInput): Boolean!
-  publishEvent(input: PublishEventInput): Event!
+	login(input: LoginInput): String
+	registerSensor(input: RegisterSensorInput!): Device
+	revokeSensor(input: RegisterSensorInput!): Boolean!
+	publishEvent(input: PublishEventInput!): Event!
 }
 
 type Query {
-  viewer: User
-  events(start: DateTime, end: DateTime): [Event!]
-  devices: [Device!]!
-  organization: Organization
+	viewer: User
+	events(start: DateTime, end: DateTime): [Event!]
+	devices: [Device!]!
+	organization: Organization
 }
 
 type Subscription {
-  events: [Event!]
+	events: [Event!]
 }
 
 type User {
-  id: String!
-  username: String!
-  email: String
-  firstname: String!
-  lastname: String!
+	id: String!
+	username: String!
+	email: String
+	firstname: String!
+	lastname: String!
 }
 
 type Organization {
-  id: String!
-  name: String!
+	id: String!
+	name: String!
 }
 
 type Device {
-  id: String!
-  mac: String!
-  type: String!
-  name: String!
-  description: String!
+	id: String!
+	mac: String!
+	type: String!
+	name: String!
+	description: String!
 }
 
 type Event {
-  id: String!
-  type: String!
-  device: Device!
-  creation: DateTime!
-  data: EventData
+	id: String!
+	type: String!
+	device: Device!
+	creation: DateTime!
+	data: EventData
 }
 
 type EventData {
-  data: String!
+	data: String!
 }
 
 input LoginInput {
-  username: String!
-  password: String!
+	username: String!
+	password: String!
 }
 
 input RegisterSensorInput {
-  mac: String!
-  type: String!
-  name: String!
-  description: String
+	mac: String!
+	type: String!
+	name: String!
+	description: String
 }
 
 input RevokeSensorInput {
-  mac: String!
+	mac: String!
 }
 
 input PublishEventInput {
-  data: Binary
+	data: Binary
 }
